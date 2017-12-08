@@ -9,11 +9,9 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, './ui'),
   entry: {
-    home: './apps/home/index.jsx',
     components: './apps/components/index.jsx',
     metaDataTable: './apps/metaDataTable/index.jsx',
     metaDataKanban: './apps/metaDataKanban/index.jsx',
-
   },
   output: {
     filename: '[name].[hash].js',
@@ -57,7 +55,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        API_URL: process.env.NODE_ENV == "staging" : JSON.stringify("http://staging-api.rodcocr.com") ? JSON.stringify("https://api.rodcocr.com")
+        API_URL: process.env.NODE_ENV == "staging" : JSON.stringify("http://xxxxx.com") ? JSON.stringify("https://xxxxxx.com")
       }
     }),
     new CleanWebpackPlugin(["dist/*.js","dist/*.css","dist/*.html","dist/*.map","dist/*.gz"], {verbose: true}),
@@ -70,12 +68,7 @@ module.exports = {
         filename: '[name].[hash].css',
         allChunks: true,
       }),
-    new HtmlWebpackPlugin({
-      template: './template.html',
-      filename: 'index.html',
-      chunks: ['home','style'],
-      inject: 'body'
-    }),
+
 
     new HtmlWebpackPlugin({
       template: './template.html',

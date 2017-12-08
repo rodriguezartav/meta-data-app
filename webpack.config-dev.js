@@ -7,7 +7,6 @@ module.exports = {
   cache: true,
   context: path.resolve(__dirname, 'ui'),
   entry: {
-   home: ['react-hot-loader/patch','webpack/hot/only-dev-server','webpack-dev-server/client?http://localhost:8080','./apps/home/index.jsx'],
    components: ['react-hot-loader/patch','webpack/hot/only-dev-server','webpack-dev-server/client?http://localhost:8080','./apps/components/index.jsx'],
    metaDataTable: ['react-hot-loader/patch','webpack/hot/only-dev-server','webpack-dev-server/client?http://localhost:8080','./apps/metaDataTable/index.jsx'],
    metaDataKanban: ['react-hot-loader/patch','webpack/hot/only-dev-server','webpack-dev-server/client?http://localhost:8080','./apps/metaDataKanban/index.jsx'],
@@ -65,12 +64,6 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'ui','template.html'),
-      filename: 'index.html',
-      chunks: ['home','style'],
-      inject: 'body'
-    }),
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'ui','template.html'),
