@@ -1,0 +1,63 @@
+{
+  "groupBy": "title",
+  "principalColumn": "first_name",
+  "columns": [
+      {
+        "title": "first_name",
+        "name":"first_name"
+      },
+      {
+        "title": "last_name",
+        "name":"last_name"
+      },
+      {
+        "title": "email",
+        "name":"email"
+      },
+      {
+        "title": "lista",
+        "name":"lista"
+      },
+      {
+        "title": "title",
+        "name":"title"
+      },
+      {
+        "title": "fecha",
+        "type": "date",
+        "name":"created_at"
+      },
+      {
+        "title": "ip_address",
+        "name":"ip_address"
+      },
+      {
+        "title": "gender",
+        "name":"gender"
+      }
+    ],
+  "newColumns": [
+    "Detalles del Contacto",
+    "first_name",
+    "last_name",
+    "ip_address"
+  ],
+  "editColumns": [
+    "Detalles del Contacto",
+    "first_name",
+    "last_name",
+    "ip_address",
+    "title",
+    "list",
+    "gender"
+  ],
+  "views": [
+    {"type": "data", "name":"All","icon":"list"},
+    {"type":"data", "name":"Other","icon":"grid"}
+  ],
+  "route": "clientes",
+  "newComponent": "new",
+  "editComponnt": "edit"
+}
+
+
